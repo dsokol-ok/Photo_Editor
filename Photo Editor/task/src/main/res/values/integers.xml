@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="slider_step">10</integer>
+    <integer name="slider_value_from">-250</integer>
+    <integer name="slider_value_to">250</integer>
+    <integer name="slider_start">0</integer>
+
+    <integer name="gamma_slider_value_to">4</integer>
+    <integer name="gamma_slider_start">1</integer>
+</resources>

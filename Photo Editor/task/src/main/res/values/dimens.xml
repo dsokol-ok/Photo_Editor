@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_M">12dp</dimen>
+    <dimen name="space_L">20dp</dimen>
+    <dimen name="space_2L">40dp</dimen>
+    <dimen name="width_title">70dp</dimen>
+
+    <dimen name="gamma_slider_step">0.2</dimen>
+    <dimen name="gamma_slider_value_from">0.2</dimen>
+</resources>

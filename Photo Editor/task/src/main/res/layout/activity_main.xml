@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        tools:ignore="ContentDescription" />
+
+
+    <LinearLayout
+        android:id="@+id/btnContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_2L"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPhoto">
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery_text_btn"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_2L"
+            android:text="@string/save_text_btn"
+            tools:ignore="ButtonStyle" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/brightnessContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_L"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnContainer">
+
+        <TextView
+            android:layout_width="@dimen/width_title"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_M"
+            android:layout_marginEnd="@dimen/space_L"
+            android:text="@string/brightness_text_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slBrightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stepSize="@integer/slider_step"
+            android:value="@integer/slider_start"
+            android:valueFrom="@integer/slider_value_from"
+            android:valueTo="@integer/slider_value_to" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contrastContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_L"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brightnessContainer">
+
+        <TextView
+            android:layout_width="@dimen/width_title"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_M"
+            android:layout_marginEnd="@dimen/space_L"
+            android:text="@string/contrast_text_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slContrast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stepSize="@integer/slider_step"
+            android:value="@integer/slider_start"
+            android:valueFrom="@integer/slider_value_from"
+            android:valueTo="@integer/slider_value_to" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/saturationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_L"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contrastContainer">
+
+        <TextView
+            android:layout_width="@dimen/width_title"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_M"
+            android:layout_marginEnd="@dimen/space_L"
+            android:text="@string/saturation_text_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slSaturation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stepSize="@integer/slider_step"
+            android:value="@integer/slider_start"
+            android:valueFrom="@integer/slider_value_from"
+            android:valueTo="@integer/slider_value_to" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gammaContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_L"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saturationContainer">
+
+        <TextView
+            android:layout_width="@dimen/width_title"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_M"
+            android:layout_marginEnd="@dimen/space_L"
+            android:text="@string/gamma_text_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slGamma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:value="@integer/gamma_slider_start"
+            android:valueTo="@integer/gamma_slider_value_to" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

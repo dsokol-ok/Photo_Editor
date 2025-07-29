@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Photo Editor</string>
+    <string name="gallery_text_btn">GALLERY</string>
+    <string name="save_text_btn">SAVE</string>
+    <string name="brightness_text_slider">brightness</string>
+    <string name="contrast_text_slider">contrast</string>
+    <string name="saturation_text_slider">saturation</string>
+    <string name="gamma_text_slider">gamma</string>
+</resources>
